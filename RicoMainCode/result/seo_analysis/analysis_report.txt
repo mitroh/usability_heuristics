@@ -1,0 +1,25 @@
+===== UI ANALYSIS REPORT: GOOGLE SEARCH PAGE =====
+
+Image: seo full form - Google Search.jpeg
+Resolution: 1290x2796 pixels
+
+===== ELEMENT STATISTICS =====
+Total UI Elements: 369
+Clickable Elements: 289 (78.3%)
+Non-clickable Elements: 80 (21.7%)
+Screen Coverage: 37.2%
+
+===== ELEMENT TYPE DISTRIBUTION =====
+Icon: 253 (68.6%)
+Text: 74 (20.1%)
+Image: 35 (9.5%)
+Toolbar: 6 (1.6%)
+Text Button: 1 (0.3%)
+
+===== USABILITY INSIGHTS =====
+
+===== GENERATED VISUALIZATIONS =====
+1. element_types.png - Distribution of UI element types
+2. clickable_elements.png - Proportion of clickable vs non-clickable elements
+3. element_heatmap.png - Heatmap showing element density
+4. elements_by_type.png - Visualization of elements by type

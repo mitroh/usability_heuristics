@@ -1,0 +1,73 @@
+# Nielsen's Heuristics Weightage in UI Evaluation System
+
+## Overview of Heuristic Weightage
+
+The UI Evaluation System employs Nielsen's 10 usability heuristics as a foundational framework for assessing interface design quality. Each heuristic is assigned a specific weight in the overall evaluation score based on its relative importance in modern UI design and its detectability through automated analysis.
+
+## Weightage Distribution
+
+| Heuristic | Weight | Description |
+|-----------|--------|-------------|
+| 1. Visibility of system status | 15% | Prioritized highly as it's critical for user orientation and can be assessed through UI element visibility, feedback indicators, and progress elements |
+| 2. Match between system and real world | 10% | Evaluated through language analysis in text elements and metaphorical representation in UI components |
+| 3. User control and freedom | 12% | Measured through presence of navigational elements, cancel options, and escape paths |
+| 4. Consistency and standards | 14% | Analyzed through pattern recognition, element styling consistency, and adherence to common UI patterns |
+| 5. Error prevention | 8% | Assessed through form validation elements, confirmation dialogs, and input constraints |
+| 6. Recognition rather than recall | 12% | Measured by evaluating menu visibility, option availability, and information accessibility |
+| 7. Flexibility and efficiency of use | 7% | Determined by detecting accelerators, shortcuts, and personalization options |
+| 8. Aesthetic and minimalist design | 13% | Evaluated through layout analysis, element density, and information hierarchy |
+| 9. Help users recognize/recover from errors | 6% | Identified through error message elements, highlighting patterns, and recovery action availability |
+| 10. Help and documentation | 3% | Detected through presence of help sections, tooltips, and documentation links |
+
+## Rationale for Weightage
+
+The weightage distribution reflects several key considerations:
+
+1. **Detectability**: Heuristics that can be more reliably detected through automated analysis receive higher weights
+2. **User Impact**: Heuristics with greater impact on core user experience receive priority
+3. **Modern UI Trends**: Weights reflect contemporary emphasis on visibility, consistency, and aesthetics
+4. **Objective Measurability**: Heuristics with more objectively measurable properties receive higher weights
+
+## Implementation Approach
+
+The system implements heuristic evaluation through:
+
+1. **Feature Extraction**: UI elements are analyzed for properties that indicate adherence to each heuristic
+2. **Pattern Analysis**: Common patterns associated with each heuristic are detected
+3. **Weighted Scoring**: Individual heuristic scores are weighted according to the distribution
+4. **Composite Evaluation**: Final usability score incorporates weighted heuristic assessments
+
+```python
+# Simplified implementation of heuristic weighting
+def apply_heuristic_weights(heuristic_scores):
+    weights = {
+        'visibility': 0.15,
+        'real_world_match': 0.10,
+        'user_control': 0.12,
+        'consistency': 0.14,
+        'error_prevention': 0.08,
+        'recognition': 0.12,
+        'flexibility': 0.07,
+        'aesthetic_design': 0.13,
+        'error_recovery': 0.06,
+        'help_documentation': 0.03
+    }
+    
+    weighted_score = sum(score * weights[heuristic] 
+                     for heuristic, score in heuristic_scores.items())
+    return weighted_score
+```
+
+## Visual Representation
+
+The piechart below visualizes the relative weights assigned to each of Nielsen's 10 heuristics in the UI evaluation system:
+
+[Piechart visualization would be displayed here]
+
+## Adaptability of Weights
+
+The weightage system is designed to be configurable for different application domains and evaluation contexts:
+
+1. **Domain-specific Adjustment**: Weights can be tuned for specialized application types (e-commerce, dashboards, etc.)
+2. **Project Requirements**: Custom weightage profiles can be created based on specific project priorities
+3. **Evolving Standards**: The weighting system can adapt to changing UI design standards and best practices 
